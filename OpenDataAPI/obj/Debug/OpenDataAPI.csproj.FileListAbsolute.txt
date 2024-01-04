@@ -1,0 +1,12 @@
+C:\Users\rayane.kanuka\source\repos\OpenDataAPI\OpenDataAPI\bin\Debug\OpenDataAPI.exe.config
+C:\Users\rayane.kanuka\source\repos\OpenDataAPI\OpenDataAPI\bin\Debug\OpenDataAPI.exe
+C:\Users\rayane.kanuka\source\repos\OpenDataAPI\OpenDataAPI\bin\Debug\OpenDataAPI.pdb
+C:\Users\rayane.kanuka\source\repos\OpenDataAPI\OpenDataAPI\bin\Debug\OpenDataLibrary.dll
+C:\Users\rayane.kanuka\source\repos\OpenDataAPI\OpenDataAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rayane.kanuka\source\repos\OpenDataAPI\OpenDataAPI\bin\Debug\OpenDataLibrary.pdb
+C:\Users\rayane.kanuka\source\repos\OpenDataAPI\OpenDataAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rayane.kanuka\source\repos\OpenDataAPI\OpenDataAPI\obj\Debug\OpenDataAPI.csproj.AssemblyReference.cache
+C:\Users\rayane.kanuka\source\repos\OpenDataAPI\OpenDataAPI\obj\Debug\OpenDataAPI.csproj.CoreCompileInputs.cache
+C:\Users\rayane.kanuka\source\repos\OpenDataAPI\OpenDataAPI\obj\Debug\OpenDataAPI.csproj.CopyComplete
+C:\Users\rayane.kanuka\source\repos\OpenDataAPI\OpenDataAPI\obj\Debug\OpenDataAPI.exe
+C:\Users\rayane.kanuka\source\repos\OpenDataAPI\OpenDataAPI\obj\Debug\OpenDataAPI.pdb
