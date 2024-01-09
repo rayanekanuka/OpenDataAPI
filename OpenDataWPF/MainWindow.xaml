@@ -34,33 +34,20 @@
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="20,63,0,0" Text="{Binding Radius, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.RowSpan="2"/>
         <!--<TextBlock Grid.Column="1" Grid.Row="3" Margin="19,23,0,-15"  HorizontalAlignment="Left" Width="0"/>-->
 
+        
         <Button x:Name="buttonGO" Command="{Binding LoadCommand}" Grid.Column="1" Content="GO" HorizontalAlignment="Left" Height="29" Margin="90,44,0,0" Grid.Row="3" VerticalAlignment="Top" Width="54" FontFamily="Sitka Display" FontSize="18" Background="#FFCA4444" FontWeight="Bold"/>
 
-        <ListView ItemBindingGroup="{Binding Path=MetroViewModel}" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="400" Margin="25,98,0,0" Grid.Row="3" VerticalAlignment="Top" Width="475"  d:ItemsSource="{d:SampleData ItemCount=5}" Foreground="#FF1649CE">
+        <ListView ItemsSource="{Binding TransportLines}" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="400" Margin="25,98,0,0" Grid.Row="3" VerticalAlignment="Top" Width="495"  d:ItemsSource="{d:SampleData ItemCount=5}" Foreground="#FF1649CE">
             <ListView.View>
                 <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="LinesData">
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=id}" Header="ID" Width="80"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=name}" Header="Name" Width="120"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=lon}" Header="Longitude" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=lat}" Header="Latitude" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=lines}" Header="Lignes" Width="50"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="ID" Width="80"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Lon}" Header="Longitude" Width="80"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Lat}" Header="Latitude" Width="80"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Lines}" Header="Lignes" Width="90"/>
                 </GridView>
             </ListView.View>
         </ListView>
-
-
-        <!--<ItemsControl x:Name="GPS" Grid.Row="3" Grid.Column="1" Margin="75,102,569,3">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Border BorderBrush="Black" BorderThickness="1" Margin="10" Padding="10">
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock Text="{Binding lon}"/>
-                            <TextBlock Text="{Binding lat}"/>
-                        </StackPanel>
-                    </Border> 
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>-->
 
     </Grid>
 </Window>

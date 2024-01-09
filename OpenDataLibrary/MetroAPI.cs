@@ -12,6 +12,9 @@ namespace OpenDataLibrary
     {
         // J'initialise mon paramètre _request
         private IRequest _request;
+        private double lat;
+        private double lon;
+        private int radius;
 
         public MetroAPI()
         {
@@ -24,15 +27,24 @@ namespace OpenDataLibrary
             _request = metroAPI;
         }
 
-        // Méthode qui appelle GetLines sur MetroAPI
-        public List<TransportLine> GetLines()
+        //public MetroAPI(double lat, double lon, int radius)
+        //{
+        //    this.lat = lat;
+        //    this.lon = lon;
+        //    this.radius = radius;
+        //}
+
+        // Méthode qui appelle GetLines sur MetroAPI // 
+        public List<TransportLine> GetLines(double lat, double lon, int radius)
         {
-            string json = _request.DoRequest("http://data.mobilites-m.fr/api/linesNear/json?x=5.731369390899194&y=45.18447955700181&dist=500&details=true");
+            string json = _request.DoRequest($"http://data.mobilites-m.fr/api/linesNear/json?x={lon.ToString(System.Globalization.CultureInfo.InvariantCulture)}&y={lat.ToString(System.Globalization.CultureInfo.InvariantCulture)}&dist={radius.ToString()}&details=true");
+            //string json = _request.DoRequest("http://data.mobilites-m.fr/api/linesNear/json?x=5.731369390899194&y=45.18447955700181&dist=500&details=true");
+            Console.WriteLine( json );
 
             // Déséralise le json en objet
             List<TransportLine> transport = JsonConvert.DeserializeObject<List<TransportLine>>(json);
+            Console.WriteLine(transport);
             return transport;
-
         }
     }
 }

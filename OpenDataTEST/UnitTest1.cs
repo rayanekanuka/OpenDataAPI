@@ -15,8 +15,8 @@ namespace OpenDataTEST
             MetroAPI api = new MetroAPI(fake);
             // ici faire le test avec Assert
             List<TransportLine> result = api.GetLines();
-            Assert.AreEqual("SEM:1696", result[0].id);
-            Assert.AreEqual("Grenoble, Chavant", result[0].name);
+            Assert.AreEqual("SEM:1696", result[0].Id);
+            Assert.AreEqual("Grenoble, Chavant", result[0].Name);
             Assert.AreNotEqual("Je suis le faux", "Grenoble, Chavant");
         }
     }

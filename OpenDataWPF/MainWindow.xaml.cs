@@ -31,6 +31,7 @@ namespace OpenDataWPF
             DataContext = _viewModel;
         }
 
+
         //    private void buttonGO_Click(object sender, RoutedEventArgs e)
         //    {
         //        MesageBox.Show($"Hello You {GetLines}");

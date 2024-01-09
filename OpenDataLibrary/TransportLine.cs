@@ -10,19 +10,19 @@ namespace OpenDataLibrary
     public class TransportLine
     {
         [JsonProperty("id")]
-        public string id { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty("lon")]
-        public double lon { get; set; }
+        public double Lon { get; set; }
 
         [JsonProperty("lat")]
-        public double lat { get; set; }
+        public double Lat { get; set; }
 
         [JsonProperty("lines")]
-        public List<string> lines { get; set; }
+        public List<string> Lines { get; set; }
 
 
     }

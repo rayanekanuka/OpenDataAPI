@@ -15,14 +15,12 @@ namespace OpenDataWPF.ViewModel
         private double _lon;
         private double _lat;
         private int _radius;
-        private ObservableCollection<TransportLine> LineData { get; set; }
-        //public List<TransportLine> GetLines = new List<TransportLine>();
 
 
         public MetroViewModel()
         {
-            Longitude = 5.731369390899194;
             Latitude = 45.18447955700181;
+            Longitude = 5.731369390899194;
             Radius = 500;
         }
 
@@ -37,7 +35,7 @@ namespace OpenDataWPF.ViewModel
                 if (_lon != value)
                 {
                     _lon = value;
-                    NotifyPropertyChanged("Longitude changée");
+                    NotifyPropertyChanged("Longitude");
                 }
             }
         }
@@ -53,7 +51,7 @@ namespace OpenDataWPF.ViewModel
                 if (_lat != value)
                 {
                     _lat = value;
-                    NotifyPropertyChanged("Latitude changée");
+                    NotifyPropertyChanged("Latitude");
                 }
             }
         }
@@ -66,7 +64,7 @@ namespace OpenDataWPF.ViewModel
                 if (_radius != value)
                 {
                     _radius = value;
-                    NotifyPropertyChanged("Rayon changé");
+                    NotifyPropertyChanged("Radius");
                 }
             }
         }
@@ -80,15 +78,16 @@ namespace OpenDataWPF.ViewModel
             }
         }
 
+
         private ICommand _loadCommand;
         public ICommand LoadCommand
         {
-            get 
-            { 
+            get
+            {
                 if (_loadCommand == null)
                 {
-                    _loadCommand = new RelayCommand(o=>DoOnLoad(), o=>true);
-                } 
+                    _loadCommand = new RelayCommand(o => DoOnLoad(), o => true);
+                }
                 return _loadCommand;
             }
             set { _loadCommand = value; }
@@ -96,18 +95,36 @@ namespace OpenDataWPF.ViewModel
 
         private void DoOnLoad()
         {
-            Console.WriteLine("To do call api...");
+            MetroAPI result = new MetroAPI();
+            List<TransportLine> tag = result.GetLines(Latitude, Longitude, Radius);
+            
+            foreach (TransportLine line in tag)
+            {
+                _transportLines.Add(line);
+            }
+
+            //Console.WriteLine("To do call api..." + result.GetLines(Latitude, Longitude, Radius)[0].Name);
         }
 
-        //public string AccessData()
-        //{
-        //    ObservableCollection<TransportLine> ShowLines = new ObservableCollection<TransportLine>();
 
-        //    return ShowLines;
-        //}
-
-        //ItemsSource="{Binding Source={StaticResource TransportLine}}"
+        private ObservableCollection<TransportLine> _transportLines = new ObservableCollection<TransportLine>();
+        public ObservableCollection<TransportLine> TransportLines
+        {
+            get
+            {
+                return _transportLines;
+            }
+            set
+            {
+                if (_transportLines != value)
+                {
+                    _transportLines = value;
+                    NotifyPropertyChanged("TransportLines");
+                }
+            }
+        }
 
     }
-    
+
 }
+

@@ -19,9 +19,9 @@ namespace OpenDataAPI
             foreach (TransportLine transportLine in tag)
             {
                 // affichage en chaîne interpolée grâce au $ du FrameWork
-                Console.WriteLine($" Id :  {transportLine.id}\t | Name : {transportLine.name} | Latitude : {transportLine.lat} | Longitude :  {transportLine.lon}");
+                Console.WriteLine($" Id :  {transportLine.Id}\t | Name : {transportLine.Name} | Latitude : {transportLine.Lat} | Longitude :  {transportLine.Lon}");
                 //Console.WriteLine(" Id :  " + transportLine.id + "\t | Name : " + transportLine.name + " | Latitude : " + transportLine.lat + " | Longitude :  " + transportLine.lon + " | Lignes : " + line);
-                foreach (string line in transportLine.lines)
+                foreach (string line in transportLine.Lines)
                 {
                     Console.WriteLine($" Lignes : {line}");
                 }
