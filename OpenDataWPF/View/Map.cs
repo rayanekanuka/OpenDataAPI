@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OpenDataWPF.View
 {
-    internal class Class1
+    public class Map
     {
+
     }
 }

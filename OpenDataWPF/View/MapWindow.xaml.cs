@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using OpenDataLibrary;
-using OpenDataWPF.ViewModel;
 
-namespace OpenDataWPF
+namespace OpenDataWPF.View
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window1 : Window
     {
-        private readonly MetroViewModel _viewModel;
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
-            _viewModel = new MetroViewModel();
-            // Le DataContext sert comme point de départ pour les chemins de Binding
-            DataContext = _viewModel;
         }
-
     }
 }
