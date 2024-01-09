@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MetroViewModel;
+using OpenDataLibrary;
+using OpenDataWPF.ViewModel;
 
 namespace OpenDataWPF
 {
@@ -21,10 +22,20 @@ namespace OpenDataWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly MetroViewModel _viewModel;
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MetroViewModel();
+            _viewModel = new MetroViewModel();
+            // Le DataContext sert comme point de départ pour les chemins de Binding
+            DataContext = _viewModel;
         }
+
+        //    private void buttonGO_Click(object sender, RoutedEventArgs e)
+        //    {
+        //        MesageBox.Show($"Hello You {GetLines}");
+        //    }
+        //}
+
     }
 }

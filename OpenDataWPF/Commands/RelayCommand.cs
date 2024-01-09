@@ -20,6 +20,11 @@ namespace OpenDataWPF.Commands
 
         public event EventHandler CanExecuteChanged;
 
+        public void Execute(object parameter)
+        {
+            _toExecute(parameter);
+        }
+
         public bool CanExecute(object parameter)
         {
             if (_canExecute != null)
@@ -30,9 +35,5 @@ namespace OpenDataWPF.Commands
             return true;
         }
 
-        public void Execute(object parameter)
-        {
-            _toExecute(parameter);
-        }
     }
 }

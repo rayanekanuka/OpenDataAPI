@@ -4,9 +4,63 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OpenDataWPF"
+        xmlns:vm="clr-namespace:OpenDataWPF.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Textbox Text ="{Binding Radius}"
+        d:DataContext="{d:DesignInstance Type=vm:MetroViewModel}"
+        Title="MainWindow" Height="720" Width="1200">
+    <Grid Background="#FFD9E0D8" Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="110"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="39.995"/>
+            <RowDefinition Height="Auto" MinHeight="25.995"/>
+            <RowDefinition Height="Auto" MinHeight="55.403"/>
+            <RowDefinition Height="Auto" MinHeight="130.403"/>
+        </Grid.RowDefinitions>
+
+        <!--<TextBlock Grid.Column="1" Grid.Row="0" Margin="0,4,0,4" Text="{Binding FullName}" HorizontalAlignment="Center" FontWeight="Bold" Width="0"/>-->
+
+        <Label x:Name="GPSpoints" Margin="38,10,0,15" Content="Recherchez vos points GPS" HorizontalAlignment="Left" FontFamily="Bahnschrift SemiBold" Grid.RowSpan="2" Width="402" Foreground="#FF802121" FontSize="30" Grid.ColumnSpan="2"/>
+        <!-- UpdateSourceTrigger=PropertyChanged makes sure that changes in the TextBoxes are immediately applied to the model. -->
+        <Label x:Name="Lon" Grid.Row="1" Margin="34,23,0,38" Content="Longitude :" HorizontalAlignment="Left" Background="{x:Null}" FontFamily="Bahnschrift" Width="93" FontSize="16" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="20,25,0,45" Text="{Binding Longitude, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="200" Grid.RowSpan="2"/>
+
+        <Label x:Name="Lat" Grid.Row="2" Margin="46,28,0,9" Content="Latitude :" HorizontalAlignment="Left" FontFamily="Bahnschrift" Width="78" FontSize="16" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="1" Grid.Row="2" Margin="20,28,0,13" Text="{Binding Latitude, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  Width="200"/>
+
+        <Label x:Name="Radius" Grid.Row="2" Margin="61,63,0,469" Content="Rayon :" HorizontalAlignment="Left" FontFamily="Bahnschrift" Width="68" FontSize="16" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="20,63,0,0" Text="{Binding Radius, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.RowSpan="2"/>
+        <!--<TextBlock Grid.Column="1" Grid.Row="3" Margin="19,23,0,-15"  HorizontalAlignment="Left" Width="0"/>-->
+
+        <Button x:Name="buttonGO" Command="{Binding LoadCommand}" Grid.Column="1" Content="GO" HorizontalAlignment="Left" Height="29" Margin="90,44,0,0" Grid.Row="3" VerticalAlignment="Top" Width="54" FontFamily="Sitka Display" FontSize="18" Background="#FFCA4444" FontWeight="Bold"/>
+
+        <ListView ItemBindingGroup="{Binding Path=MetroViewModel}" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="400" Margin="25,98,0,0" Grid.Row="3" VerticalAlignment="Top" Width="475"  d:ItemsSource="{d:SampleData ItemCount=5}" Foreground="#FF1649CE">
+            <ListView.View>
+                <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="LinesData">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=id}" Header="ID" Width="80"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=name}" Header="Name" Width="120"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=lon}" Header="Longitude" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=lat}" Header="Latitude" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=lines}" Header="Lignes" Width="50"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+        <!--<ItemsControl x:Name="GPS" Grid.Row="3" Grid.Column="1" Margin="75,102,569,3">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="10" Padding="10">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding lon}"/>
+                            <TextBlock Text="{Binding lat}"/>
+                        </StackPanel>
+                    </Border> 
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>-->
+
     </Grid>
 </Window>
