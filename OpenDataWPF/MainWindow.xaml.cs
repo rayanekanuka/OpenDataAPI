@@ -30,7 +30,7 @@ namespace OpenDataWPF
             _viewModel = new MetroViewModel();
             // Le DataContext sert comme point de départ pour les chemins de Binding
             DataContext = _viewModel;
-            myMap.Mode = new AerialMode(true);
+            myMap.Mode = new RoadMode();
         }
 
     }

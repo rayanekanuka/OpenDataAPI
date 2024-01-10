@@ -50,7 +50,7 @@
             </ListView.View>
         </ListView>
 
-        <m:Map x:Name="myMap" CredentialsProvider="GifWDl1mYEQHCGoGIOCt~pcmXmtL6DoUyeVdq3C9iKA~AoiTmLLFCotJll-mv9vXN6qua5o_1QxlGCvMMBGI6Aukh5BS6NAuzi9_KrH9uaDA" Mode="Aerial" Center="45.185047, 5.731538" ZoomLevel="16" Grid.Column="1" Margin="450,-1,5,-48" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="4">
+        <m:Map x:Name="myMap" CredentialsProvider="GifWDl1mYEQHCGoGIOCt~pcmXmtL6DoUyeVdq3C9iKA~AoiTmLLFCotJll-mv9vXN6qua5o_1QxlGCvMMBGI6Aukh5BS6NAuzi9_KrH9uaDA" Mode="Road" Center="45.185047, 5.731538" ZoomLevel="16" Grid.Column="1" Margin="450,-1,5,-48" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="4">
             <m:Map.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
