@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OpenDataWPF"
         xmlns:vm="clr-namespace:OpenDataWPF.ViewModel"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance Type=vm:MetroViewModel}"
         Title="MainWindow" Height="790 " Width="1400">
@@ -34,7 +35,7 @@
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="20,63,0,0" Text="{Binding Radius, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.RowSpan="2"/>
         <!--<TextBlock Grid.Column="1" Grid.Row="3" Margin="19,23,0,-15"  HorizontalAlignment="Left" Width="0"/>-->
 
-        
+
         <Button x:Name="buttonGO" Command="{Binding LoadCommand}" Grid.Column="1" Content="GO" HorizontalAlignment="Left" Height="29" Margin="90,44,0,0" Grid.Row="3" VerticalAlignment="Top" Width="54" FontFamily="Sitka Display" FontSize="18" Background="#FFDE70B1" FontWeight="Bold"/>
 
         <ListView ItemsSource="{Binding TransportLines}" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="489" Margin="25,98,0,0" Grid.Row="3" VerticalAlignment="Top" Width="495"  d:ItemsSource="{d:SampleData ItemCount=5}" Foreground="#FF1649CE">
@@ -48,6 +49,18 @@
                 </GridView>
             </ListView.View>
         </ListView>
+
+        <m:Map x:Name="myMap" CredentialsProvider="GifWDl1mYEQHCGoGIOCt~pcmXmtL6DoUyeVdq3C9iKA~AoiTmLLFCotJll-mv9vXN6qua5o_1QxlGCvMMBGI6Aukh5BS6NAuzi9_KrH9uaDA" Mode="Aerial" Center="45.185047, 5.731538" ZoomLevel="16" Grid.Column="1" Margin="450,-1,5,-48" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="4">
+            <m:Map.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </m:Map.RenderTransform>
+        </m:Map>
 
     </Grid>
 </Window>

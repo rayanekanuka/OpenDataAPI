@@ -12,26 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Microsoft.Maps.MapControl.WPF;
-using OpenDataLibrary;
-using OpenDataWPF.ViewModel;
 
-namespace OpenDataWPF
+namespace OpenDataMap
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly MetroViewModel _viewModel;
         public MainWindow()
         {
             InitializeComponent();
-            _viewModel = new MetroViewModel();
-            // Le DataContext sert comme point de départ pour les chemins de Binding
-            DataContext = _viewModel;
-            myMap.Mode = new AerialMode(true);
         }
-
     }
 }
