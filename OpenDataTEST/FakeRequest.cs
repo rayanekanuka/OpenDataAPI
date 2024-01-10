@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OpenDataTEST
 {
-    internal class FakeRequest : IRequest
+    public class FakeRequest : IRequest
     {
         public FakeRequest() { }
 

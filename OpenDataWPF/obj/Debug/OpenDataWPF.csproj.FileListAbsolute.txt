@@ -20,3 +20,5 @@ C:\Users\rayane.kanuka\Desktop\C#\DataAPI\OpenDataAPI\OpenDataWPF\bin\Debug\Open
 C:\Users\rayane.kanuka\Desktop\C#\DataAPI\OpenDataAPI\OpenDataWPF\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
 C:\Users\rayane.kanuka\Desktop\C#\DataAPI\OpenDataAPI\OpenDataWPF\bin\Debug\Newtonsoft.Json.xml
 C:\Users\rayane.kanuka\Desktop\C#\DataAPI\OpenDataAPI\OpenDataWPF\obj\Debug\OpenDataWPF.csproj.CopyComplete
+C:\Users\rayane.kanuka\Desktop\C#\DataAPI\OpenDataAPI\OpenDataWPF\obj\Debug\View\MapWindow.g.cs
+C:\Users\rayane.kanuka\Desktop\C#\DataAPI\OpenDataAPI\OpenDataWPF\obj\Debug\View\MapWindow.baml

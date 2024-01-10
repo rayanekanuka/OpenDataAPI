@@ -12,9 +12,9 @@ namespace OpenDataLibrary
     {
         // J'initialise mon paramètre _request
         private IRequest _request;
-        private double lat;
-        private double lon;
-        private int radius;
+        private double _lat;
+        private double _lon;
+        private int _radius;
 
         public MetroAPI()
         {

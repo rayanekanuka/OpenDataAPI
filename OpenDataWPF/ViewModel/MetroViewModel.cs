@@ -19,8 +19,8 @@ namespace OpenDataWPF.ViewModel
 
         public MetroViewModel()
         {
-            Latitude = 45.18447955700181;
             Longitude = 5.731369390899194;
+            Latitude = 45.18447955700181;
             Radius = 500;
         }
 
@@ -78,7 +78,7 @@ namespace OpenDataWPF.ViewModel
             }
         }
 
-
+          
         private ICommand _loadCommand;
         public ICommand LoadCommand
         {
