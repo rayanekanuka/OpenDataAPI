@@ -3,16 +3,16 @@
 ## OBJECTIFS
 Le but de ce module est la découverte du langage orienté objet C# et les outils proposés par le framework .Net.
 
-- Découverte d’un nouveau langage objet
-- Renforcer les connaissances en programmation objet
-- Manipuler et afficher des données provenant des OpenData publiques.
-- Implémenter des tests unitaires.
-- Découvrir l’architecture MVVM
-- Mener un projet de développement en équipe et de manière professionnelle
+1. Découverte d’un nouveau langage objet
+2. Renforcer les connaissances en programmation objet
+3. Manipuler et afficher des données provenant des OpenData publiques.
+4. Implémenter des tests unitaires.
+5. Découvrir l’architecture MVVM
+6. Mener un projet de développement en équipe et de manière professionnelle
 
 
 ## Compétences 
-C# .Net
+
 + Démarrer avec Visual Studio
 + Mettre en œuvre les “Fake” objects
 + Donner un schéma expliquant la création d’un code exécutable à partir du code source
